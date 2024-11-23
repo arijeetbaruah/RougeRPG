@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2670955441878404809}
   - component: {fileID: 1730347222519874343}
   - component: {fileID: 1407959237783388830}
+  - component: {fileID: 416228722402950971}
+  - component: {fileID: 6485881962965076826}
   m_Layer: 0
   m_Name: Samurai
   m_TagString: Player
@@ -173,7 +175,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a970a6e7cd41948982d746fb02ec76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 2985750774067783791}
+  animator: {fileID: 6485881962965076826}
+  hitBoxes:
+  - {fileID: 5626246968979603809}
+  - {fileID: 2971695752605858353}
 --- !u!50 &1407959237783388830
 Rigidbody2D:
   serializedVersion: 5
@@ -189,7 +194,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -201,6 +206,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &416228722402950971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086721717935807696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74faf16a9320754ca8babf8b346bb39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &6485881962965076826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086721717935807696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6020e4ff5340ee54a8dc6f6abf73c05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4130793216715730511
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +242,7 @@ GameObject:
   - component: {fileID: 1452222385010203239}
   - component: {fileID: 298916660921969795}
   - component: {fileID: 2728684831389428071}
+  - component: {fileID: 2971695752605858353}
   m_Layer: 0
   m_Name: Attack2HitBox
   m_TagString: Attack Animation
@@ -289,7 +320,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4130793216715730511}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.0001
@@ -307,6 +338,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2971695752605858353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130793216715730511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be5680b80a48924698132071f38d879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6994590903473905667
 GameObject:
   m_ObjectHideFlags: 0
