@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8637470423514994481}
   - component: {fileID: 2178606568871818084}
   - component: {fileID: 932628086340633603}
-  - component: {fileID: 8262452341465604800}
   - component: {fileID: 2494212100417634015}
   - component: {fileID: 6863765977929116876}
+  - component: {fileID: 5457500254501523363}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: Player
@@ -188,20 +188,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8262452341465604800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 803914847579588693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34a970a6e7cd41948982d746fb02ec76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 6863765977929116876}
-  hitBoxes: []
 --- !u!114 &2494212100417634015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  maxHealth: 100
 --- !u!114 &6863765977929116876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,3 +214,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6020e4ff5340ee54a8dc6f6abf73c05f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5457500254501523363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803914847579588693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c190d6103797bf045ba4d2439cc1a681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitBoxes: []
+  movementSpeed: 0

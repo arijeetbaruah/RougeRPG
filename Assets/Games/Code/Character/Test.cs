@@ -1,4 +1,5 @@
 using System;
+using RougeRPG.Character;
 using UnityEngine;
 
 public class Test : MonoBehaviour
