@@ -10,6 +10,7 @@ namespace RougeRPG.Character
         protected readonly int Attack1Animation = Animator.StringToHash("Attack1");
         protected readonly int Attack2Animation = Animator.StringToHash("Attack2");
         protected readonly int HitAnimation = Animator.StringToHash("Hit");
+        protected readonly int DeathAnimation = Animator.StringToHash("Death");
 
         protected Animator animator;
         protected Coroutine attackCoroutine;
@@ -45,6 +46,11 @@ namespace RougeRPG.Character
         public void PlayHitAnimation()
         {
             animator.Play(HitAnimation);
+        }
+
+        public void PlayDeathAnimation()
+        {
+            animator.Play(DeathAnimation);
         }
 
         public IEnumerator Callback(float timer, Action callback)

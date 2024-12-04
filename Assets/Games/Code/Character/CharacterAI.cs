@@ -7,6 +7,8 @@ namespace RougeRPG
     [RequireComponent(typeof(Health))]
     public class CharacterAI : MonoBehaviour
     {
+        [SerializeField] private HealthCanvas _healthCanvas;
+        
         private Health _health;
         private PlayerAnimationController _playerAnim;
 
@@ -31,11 +33,12 @@ namespace RougeRPG
         private void OnDamage(Health character, float damage)
         {
             _playerAnim?.PlayHitAnimation();
+            _healthCanvas.SetHeathBar(character, damage);
         }
 
         private void OnDeath(Health character)
         {
-            
+            _playerAnim.PlayDeathAnimation();
         }
     }
 }
